@@ -17,7 +17,7 @@ const arrList = [
   {
     description: 'Lunch Time',
     completed: false,
-    index: 2,
+    index: 4,
   },
   {
     description: 'Its Coding Time',
@@ -27,9 +27,10 @@ const arrList = [
   {
     description: 'Zoom Meeting',
     completed: false,
-    index: 4,
+    index: 2,
   },
 ];
+arrList.sort((x, y) => x.index - y.index);
 
 // To Do List Element Creation here
 arrList.forEach((elements) => {
