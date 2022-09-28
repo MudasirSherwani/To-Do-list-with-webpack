@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do List</title>
 </head>
 <body>
+    <div class="container-class">
+        <div class="row">
+            <h1>Today's To Do</h1>
+            <img class="icon" src="./images/refresh.png" alt="refresh image">
+        </div>
+        <hr>
+        <div class="row">
+            <input class="totdo-title-input" type="text"  placeholder = "Add to your list..." name="totdo-title" id="totdotitle">
+            <img class="icon" src="./images/AddMore.png" alt="add more button">
+        </div>
+        <hr>
+        <div class="class-todolist" id="todolist">
+        <!-- To Do List Element Creation here -->
+        </div>
+        <div class="clear-button">
+            <a href="#">
+              <p>Clear all completed</p>
+            </a>
+        </div>
+    </div>
 </body>
 </html>

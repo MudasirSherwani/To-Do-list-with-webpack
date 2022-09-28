@@ -1,0 +1,95 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  margin: 2px;
+}
+
+.container-class {
+  margin-top: 100px;
+  width: 500px;
+  background-color: white;
+  border: 0.2px solid black;
+  border-radius: 3px;
+  box-shadow: 5px 10px 8px 10px #b5b0b0;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.more-option {
+  width: 20px;
+  height: 20px;
+}
+
+.totdo-title-input {
+  text-indent: 20px;
+  font-family: "Poppins", sans-serif;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  width: 400px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.todo-list-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.row h1 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Poppins, sans-serif;
+}
+
+input:placeholder-shown {
+  font-style: italic;
+}
+
+.class-todolist {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-elements h2 {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Poppins, sans-serif;
+  margin-left: 15px;
+}
+
+.clear-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(212, 243, 238);
+  margin-top: -8px;
+  padding: 10px;
+  height: 30px;
+}
+
+.clear-button a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
