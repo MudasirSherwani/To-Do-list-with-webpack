@@ -50,6 +50,10 @@ body {
   padding: 0 10px;
 }
 
+#addButton {
+  cursor: pointer;
+}
+
 .row h1 {
   font-size: 18px;
   font-weight: bold;

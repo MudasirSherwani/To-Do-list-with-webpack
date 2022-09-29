@@ -1,35 +1,22 @@
 import moreButton from './images/moreButton.png';
 import './index.css';
+import todoClass from './module/todolistClass.js';
+
+const AddtotList = document.getElementById('addButton');
+const todoTitle = document.getElementById('totdotitle');
+
+//  submit todo list data
+AddtotList.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (todoTitle.value !== '') {
+    console.log(todoTitle.value);
+    const objtodoClass = new todoClass(todoTitle.value, false, 1);
+    objtodoClass.addTodoList();
+  }
+});
 
 const Todolist = document.getElementById('todolist');
-//  Create Object List of To-Do List
-const arrList = [
-  {
-    description: 'Car fix',
-    completed: true,
-    index: 0,
-  },
-  {
-    description: 'Football Time',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Lunch Time',
-    completed: false,
-    index: 4,
-  },
-  {
-    description: 'Its Coding Time',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Zoom Meeting',
-    completed: false,
-    index: 2,
-  },
-];
+const arrList = JSON.parse(localStorage.getItem('todoListStorage')) || [];
 arrList.sort((x, y) => x.index - y.index);
 
 // To Do List Element Creation here
