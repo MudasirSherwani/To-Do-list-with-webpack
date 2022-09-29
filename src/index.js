@@ -21,3 +21,20 @@ const getListData = objtodoClass.GetTodoList();
 getListData.forEach((item) => {
   showTodoList(item);
 });
+
+const removeFromList = (getDeleteButton) => {
+  if (getDeleteButton.classList.contains('delete-button')) {
+    const getTodoIndex= getDeleteButton.parentNode.parentNode.firstElementChild.lastElementChild.innerHTML;
+    const objtodoClass = new todoClass();
+    objtodoClass.removeTodoList(getTodoIndex);
+    getDeleteButton.parentNode.parentNode.parentNode.remove();
+  }
+};
+const getDeleteButton = (content) => {
+  removeFromList(content.target);
+};
+const getListContent = document.getElementById('todolist')
+getListContent.addEventListener('click', getDeleteButton);
+
+
+

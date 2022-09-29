@@ -18,4 +18,11 @@ export default class todoClass {
     showTodoList(todoList);
     localStorage.setItem('todoListStorage', JSON.stringify(OldtodoList));
   }
+
+  removeTodoList(desc) {
+    let OldtodoList = this.GetTodoList();
+    OldtodoList = OldtodoList.filter((lst) => lst.description !==desc);
+    OldtodoList.forEach((lst, index) => { lst.index = index + 1; });
+    localStorage.setItem('todoListStorage', JSON.stringify(OldtodoList));
+  }
 }
