@@ -1,17 +1,21 @@
-let todoList = [];
-let todoListData = JSON.parse(localStorage.getItem('todoListStorage')) || [];
+import showTodoList from '../module/displayListData.js';
 
+let todoList = [];
 export default class todoClass {
-  constructor(desc, compl, indx) {
+  constructor(desc) {
     this.description=  desc;
-    this.completed= compl;
-    this.index= indx;
+  }
+
+  GetTodoList() {
+    let todoListData = JSON.parse(localStorage.getItem('todoListStorage')) || [];
+    return todoListData;
   }
 
   addTodoList() {
-    todoList = { description: this.description, completed: this.completed, index: this.index };
-    todoListData.push(todoList);
-    localStorage.setItem('todoListStorage', JSON.stringify(todoListData));
+    let OldtodoList = this.GetTodoList();
+    todoList = { description: this.description, completed: false, index: OldtodoList.length + 1 };
+    OldtodoList.push(todoList);
+    showTodoList(todoList);
+    localStorage.setItem('todoListStorage', JSON.stringify(OldtodoList));
   }
-
 }
