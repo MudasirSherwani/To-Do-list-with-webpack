@@ -1,6 +1,7 @@
 import './index.css';
 import TodoClass from './module/todolistClass.js';
 import showTodoList from './module/displayListData.js';
+import ClearComplTaks from './module/ClearCompleteTask.js';
 
 const AddtotList = document.getElementById('addButton');
 const todoTitle = document.getElementById('totdotitle');
@@ -70,3 +71,8 @@ if (item.description === task_index) {
 localStorage.setItem('todoListStorage', JSON.stringify(getListData));
 });
 }
+
+const ClearTaskButton = document.getElementById('clear-btn');
+ClearTaskButton.addEventListener('click', () => {
+  ClearComplTaks();
+});
