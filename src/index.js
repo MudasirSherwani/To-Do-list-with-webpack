@@ -72,7 +72,14 @@ localStorage.setItem('todoListStorage', JSON.stringify(getListData));
 });
 }
 
+// Clear All Complete Tasks Event Handler
 const ClearTaskButton = document.getElementById('clear-btn');
 ClearTaskButton.addEventListener('click', () => {
   ClearComplTaks();
+});
+
+// Reload Button Event Handler
+const reloadButton = document.getElementById('reload-btn');
+reloadButton.addEventListener('click', () => {
+  window.location.reload();
 });
