@@ -2,8 +2,9 @@ import showTodoList from './displayListData.js';
 
 let todoList = [];
 export default class todoClass {
-  constructor(desc) {
+  constructor(desc, comp) {
     this.description = desc;
+    this.completed = comp;
   }
 
   GetTodoList() {
@@ -16,7 +17,7 @@ export default class todoClass {
 
   addTodoList() {
     const OldtodoList = this.GetTodoList();
-    todoList = { description: this.description, completed: false, index: OldtodoList.length + 1 };
+    todoList = { description: this.description, completed: this.completed, index: OldtodoList.length + 1 };
     OldtodoList.push(todoList);
     showTodoList(todoList);
     localStorage.setItem('todoListStorage', JSON.stringify(OldtodoList));

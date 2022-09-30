@@ -9,7 +9,7 @@ const todoTitle = document.getElementById('totdotitle');
 AddtotList.addEventListener('click', (e) => {
   e.preventDefault();
   if (todoTitle.value !== '') {
-    const ObjtodoClass = new TodoClass(todoTitle.value);
+    const ObjtodoClass = new TodoClass(todoTitle.value, false);
     ObjtodoClass.addTodoList();
     todoTitle.value = '';
   }
@@ -57,3 +57,16 @@ const getEditButton = (content) => {
 };
 const getListContentEdit = document.getElementById('todolist');
 getListContentEdit.addEventListener('click', getEditButton);
+
+// Update Task Status 
+window. ChangeTaskStatus =(task_index) => {
+console.log(task_index);
+const ObjtodoClass = new TodoClass();
+const getListData = ObjtodoClass.GetTodoList();
+getListData.forEach((item) => {
+if (item.description === task_index) {
+  item.completed = !item.completed;
+}
+localStorage.setItem('todoListStorage', JSON.stringify(getListData));
+});
+}
