@@ -1,4 +1,4 @@
-import TodoClass from '../module/todolistClass.js';
+import TodoClass from './todolistClass.js';
 
 // clear complete task button
 const ClearCompFunction = () => {
@@ -10,5 +10,5 @@ const ClearCompFunction = () => {
   });
   localStorage.setItem('todoListStorage', JSON.stringify(UncompleteTask));
   window.location.reload();
-}
+};
 export default ClearCompFunction;

@@ -59,18 +59,17 @@ const getEditButton = (content) => {
 const getListContentEdit = document.getElementById('todolist');
 getListContentEdit.addEventListener('click', getEditButton);
 
-// Update Task Status 
-window. ChangeTaskStatus =(task_index) => {
-console.log(task_index);
-const ObjtodoClass = new TodoClass();
-const getListData = ObjtodoClass.GetTodoList();
-getListData.forEach((item) => {
-if (item.description === task_index) {
-  item.completed = !item.completed;
-}
-localStorage.setItem('todoListStorage', JSON.stringify(getListData));
-});
-}
+// Update Task Status
+window.ChangeTaskStatus = (taskIndex) => {
+  const ObjtodoClass = new TodoClass();
+  const getListData = ObjtodoClass.GetTodoList();
+  getListData.forEach((item) => {
+    if (item.description === taskIndex) {
+      item.completed = !item.completed;
+    }
+    localStorage.setItem('todoListStorage', JSON.stringify(getListData));
+  });
+};
 
 // Clear All Complete Tasks Event Handler
 const ClearTaskButton = document.getElementById('clear-btn');

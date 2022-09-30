@@ -17,7 +17,11 @@ export default class todoClass {
 
   addTodoList() {
     const OldtodoList = this.GetTodoList();
-    todoList = { description: this.description, completed: this.completed, index: OldtodoList.length + 1 };
+    todoList = {
+      description: this.description,
+      completed: this.completed,
+      index: OldtodoList.length + 1,
+    };
     OldtodoList.push(todoList);
     showTodoList(todoList);
     localStorage.setItem('todoListStorage', JSON.stringify(OldtodoList));
