@@ -18,11 +18,16 @@ body {
 .icon {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
-.more-option {
-  width: 20px;
-  height: 20px;
+.more-options {
+  height: 40px;
+  width: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .totdo-title-input {
@@ -48,6 +53,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
+}
+
+#addButton {
+  cursor: pointer;
 }
 
 .row h1 {
