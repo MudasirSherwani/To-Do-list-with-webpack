@@ -22,6 +22,7 @@ getListData.forEach((item) => {
   showTodoList(item);
 });
 
+// Delete Button Feature Here
 const removeFromList = (getDeleteButton) => {
   if (getDeleteButton.classList.contains('delete-button')) {
     const getTodoIndex= getDeleteButton.parentNode.parentNode.firstElementChild.lastElementChild.innerHTML;
@@ -37,4 +38,18 @@ const getListContent = document.getElementById('todolist')
 getListContent.addEventListener('click', getDeleteButton);
 
 
-
+// Edit Button Feature Here
+const EditFromList = (getEditButton) => {
+  if (getEditButton.classList.contains('edit-button')) {
+    const getTodoListDesc= getEditButton.parentNode.parentNode.firstElementChild.lastElementChild.innerHTML;
+    todoTitle.value = getTodoListDesc;
+    const objtodoClass = new todoClass();
+    objtodoClass.removeTodoList(getTodoListDesc);
+    getEditButton.parentNode.parentNode.parentNode.remove();
+  }
+};
+const getEditButton = (content) => {
+  EditFromList(content.target);
+};
+const getListContentEdit = document.getElementById('todolist')
+getListContentEdit.addEventListener('click', getEditButton);
