@@ -1,10 +1,6 @@
 import DeleteIcon from '../images/delete.png';
 import EditIcon from '../images/edit.png';
 
-function listItemDelete (i) {
-  console.log(i);
-}
-
 const Todolist = document.getElementById('todolist');
 // To Do List Element Creation here
 const showTodoList = (elements) => {
