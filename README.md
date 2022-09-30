@@ -1,7 +1,7 @@
-# To Do list: CRUD Operations.
+# To Do list: Interactive List
 
 > The basic purpose of this To Do list: list structure Project is to Use webpack to bundle JavaScript.
-Learn how to use proper ES6 syntax. Use ES6 modules to write modular JavaScript. This project consist of To-do list structre and crud operations.
+Learn how to use proper ES6 syntax. Use ES6 modules to write modular JavaScript. This project consist of To-do list structre, crud operations and Interactive List
 
 ## Website Live Demo Link
 
