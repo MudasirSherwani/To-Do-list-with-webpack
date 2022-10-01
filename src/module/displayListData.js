@@ -12,8 +12,8 @@ const showTodoList = (elements) => {
   editIcon.src = EditIcon;
   const div = `<div><div class="todo-list-section">
                     <div class="list-elements">
-                        <input class="todo-checkbox" type="checkbox"  id="cbid-list" name="cb-name" value="" ${elements.completed ? 'checked' : ''}>
-                        <h2 id="${elements.index}" class="title">${elements.description}</h2>
+                        <input class="todo-checkbox" type="checkbox" onclick="ChangeTaskStatus(this.id)"  id="${elements.description}" name="cb-name" value="" ${elements.completed ? 'checked' : ''}>
+                        <h2 class="title">${elements.description}</h2>
                     </div>
                     <div class="more-options">
                     <img class="icon edit-button" src="${EditIcon}" alt="Edit button icon">

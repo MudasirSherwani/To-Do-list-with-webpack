@@ -1,6 +1,7 @@
 import './index.css';
 import TodoClass from './module/todolistClass.js';
 import showTodoList from './module/displayListData.js';
+import ClearComplTaks from './module/ClearCompleteTask.js';
 
 const AddtotList = document.getElementById('addButton');
 const todoTitle = document.getElementById('totdotitle');
@@ -9,7 +10,7 @@ const todoTitle = document.getElementById('totdotitle');
 AddtotList.addEventListener('click', (e) => {
   e.preventDefault();
   if (todoTitle.value !== '') {
-    const ObjtodoClass = new TodoClass(todoTitle.value);
+    const ObjtodoClass = new TodoClass(todoTitle.value, false);
     ObjtodoClass.addTodoList();
     todoTitle.value = '';
   }
@@ -57,3 +58,27 @@ const getEditButton = (content) => {
 };
 const getListContentEdit = document.getElementById('todolist');
 getListContentEdit.addEventListener('click', getEditButton);
+
+// Update Task Status
+window.ChangeTaskStatus = (taskIndex) => {
+  const ObjtodoClass = new TodoClass();
+  const getListData = ObjtodoClass.GetTodoList();
+  getListData.forEach((item) => {
+    if (item.description === taskIndex) {
+      item.completed = !item.completed;
+    }
+    localStorage.setItem('todoListStorage', JSON.stringify(getListData));
+  });
+};
+
+// Clear All Complete Tasks Event Handler
+const ClearTaskButton = document.getElementById('clear-btn');
+ClearTaskButton.addEventListener('click', () => {
+  ClearComplTaks();
+});
+
+// Reload Button Event Handler
+const reloadButton = document.getElementById('reload-btn');
+reloadButton.addEventListener('click', () => {
+  window.location.reload();
+});
