@@ -5,7 +5,7 @@ Learn how to use proper ES6 syntax. Use ES6 modules to write modular JavaScript.
 
 ## Website Live Demo Link
 
-- [To Do list](https://mudasirsherwani.github.io/To-Do-list-with-webpack/)
+- [To Do list](https://mudasirsherwani.github.io/To-Do-list-with-webpack/dist)
 
 ## Built With
 
